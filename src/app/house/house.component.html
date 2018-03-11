@@ -1,0 +1,70 @@
+
+<!-- <div>
+    <input type="text" class="form-control" [(ngModel)]="ftext" >
+  </div> -->
+  <br>
+  <br>
+  <br>
+  <div class="form-group lokasyon">
+    <label for="">Lokasyon Sırala</label>
+    <select class="form-control" [(ngModel)]="ftext" name="" id="">
+      <option *ngFor="let item of locations ">{{item.location}}</option>
+      
+    </select>
+  </div>
+<br>
+  <br>
+      
+    <div class="col-md-12">
+
+        <div class="row">
+
+            <div *ngFor="let item of houses |houseFilter:ftext" class="col-md-3">
+
+              <div class="card text-left">
+                <img class="card-img-top" src={{item.img}} alt="">
+                <div class="card-body">
+                  <h4 class="card-title">{{item.location}}</h4>
+                  <p class="card-text">{{item.name}}</p>
+                </div>
+
+                <div class="row" id="kapsayici">
+
+                  <div class="col-md-4" id="kare">
+                    <img src="http://cdn.evtiko.com/images/metrekare.svg" alt="">
+                    <span >{{item.room}}</span>
+                  </div>
+
+                  <div class="col-md-4" id="kare">
+                    <img src="http://cdn.evtiko.com/images/metrekare.svg" alt="">
+                    <span >{{item.size}}m2</span>
+                  </div>
+
+                  <div class="col-md-4" id="kare">
+                    <img src="http://cdn.evtiko.com/images/metrekare.svg" alt="">
+                    <span >{{item.floor}}</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+<!-- <ul class="list-group">
+    <li  *ngFor="let item of houses | houseFilter:ftext" class="list-group-item ">
+        {{item.name}}{{item.size}}
+    </li>
+</ul> -->
